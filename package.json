@@ -1,5 +1,5 @@
 {
-  "name": "BackAndForthRN",
+  "name": "back_and_forth_rn",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -21,7 +21,8 @@
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.1",
     "react-test-renderer": "16.8.3",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "tslint": "^5.18.0"
   },
   "jest": {
     "preset": "react-native"
