@@ -1,10 +1,9 @@
-import {Area} from './Area';
-import {Contributors} from './Contributors';
-import {GeoData} from './GeoData';
-import {Moderation} from './Moderation';
-import {Tag} from './Tag';
-import {TopologyData} from './TopologyData';
-
+import { Area } from './Area';
+import { Contributors } from './Contributors';
+import { GeoData } from './GeoData';
+import { Moderation } from './Moderation';
+import { Tag } from './Tag';
+import { TopologyData } from './TopologyData';
 
 export interface OffPiste {
   access?: string;
