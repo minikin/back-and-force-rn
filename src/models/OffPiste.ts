@@ -1,9 +1,9 @@
-import { Area } from './Area';
-import { Contributors } from './Contributors';
-import { GeoData } from './GeoData';
-import { Moderation } from './Moderation';
-import { Tag } from './Tag';
-import { TopologyData } from './TopologyData';
+import {Area} from './Area';
+import {Contributors} from './Contributors';
+import {GeoData} from './GeoData';
+import {Moderation} from './Moderation';
+import {Tag} from './Tag';
+import {TopologyData} from './TopologyData';
 
 export interface OffPiste {
   access?: string;
@@ -49,8 +49,4 @@ export interface OffPiste {
   topologyData?: TopologyData;
   trees?: boolean;
   walkRequired?: boolean;
-}
-
-export function fromJson(json: string): OffPiste {
-  return JSON.parse(json) as OffPiste;
 }

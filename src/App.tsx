@@ -1,39 +1,43 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
-import * as data from './assets/off-pistes.json';
+import data from './assets/off-pistes.json';
 import { OffPiste } from './models/OffPiste.js';
+import ListItem from './components/ListItem.js';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     const json = JSON.stringify(data);
-    const posts = JSON.parse(json) as [OffPiste];
-    console.log(posts);
+    const lines = JSON.parse(json) as OffPiste[];
+    const item = lines[4];
 
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>TTTT</Text>
+        {/* <ListItem {...item} /> */}
+        <Text style={styles.title}>{lines[23].name}</Text>
+        <Text style={styles.body}>{lines[23].description}</Text>
       </View>
     );
   }
 }
 
+export default App;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
+  title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    margin: 10
+  },
+  body: {
+    fontSize: 14,
+    textAlign: 'left',
     margin: 10
   }
 });
-
-const logPost = (id: number) => {
-  console.log(`
-    Id: ${id}
-  `);
-};

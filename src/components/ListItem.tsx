@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { OffPiste } from '../models/OffPiste';
 
-class ListItem extends Component {
+class ListItem extends Component<OffPiste> {
+  _onPress = () => {
+    console.log(this.props.id);
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Text</Text>
+        <Text style={styles.title}>{this.props.name}</Text>
+        <Text style={styles.body}>{this.props.description}</Text>
       </View>
     );
   }
@@ -14,13 +20,17 @@ class ListItem extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF'
   },
-  text: {
-    fontSize: 20,
-    textAlign: 'center',
+  title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    margin: 10
+  },
+  body: {
+    fontSize: 14,
+    textAlign: 'left',
     margin: 10
   }
 });
